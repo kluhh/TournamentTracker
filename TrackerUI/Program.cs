@@ -8,10 +8,15 @@ namespace TrackerUI
         [STAThread]
         static void Main()
         {
-            // To customize application configuration such as set high DPI settings or default font,
-            // see https://aka.ms/applicationconfiguration.
+          
             ApplicationConfiguration.Initialize();
-            Application.Run(new tournamentDashboardForm());
+
+            //Initial the database connections
+            TrackerLibrary.GlobalConfig.InitializeConnections(true, true);
+            //Application.Run(new tournamentDashboardForm());
+
+            Application.Run(new createPrizeForm());
+
         }
     }
 }
