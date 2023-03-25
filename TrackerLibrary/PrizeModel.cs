@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 namespace TrackerLibrary
 {
     public class PrizeModel
+
+        //Properties
     {
         /// <summary>
         /// The unique identifier for the prize.
@@ -35,5 +37,30 @@ namespace TrackerLibrary
         /// of the overall take or if zero it is not used
         /// </summary>
         public double PrizePercentage { get; set; }
+
+        //Constructors
+        public PrizeModel() 
+        { 
+        }
+
+        public PrizeModel(string placeName, string placeNumber, string prizeAmount, string prizePercentage)
+        {
+            PlaceName = placeName;
+
+            int placeNumberValue = 0;
+            int.TryParse(placeNumber, out placeNumberValue);
+            PlaceNumber = placeNumberValue;
+
+            decimal prizeAmountValue = 0;
+            decimal.TryParse(prizeAmount, out prizeAmountValue);
+            PrizeAmount = prizeAmountValue;
+
+            double prizePercentageValue = 0;
+            double.TryParse(prizePercentage, out prizePercentageValue);
+            PrizePercentage = prizePercentageValue;
+
+
+            
+        }
     }
 }
