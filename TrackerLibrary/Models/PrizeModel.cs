@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TrackerLibrary
+namespace TrackerLibrary.Models
 {
     public class PrizeModel
 
-        //Properties
+    //Properties
     {
         /// <summary>
         /// The unique identifier for the prize.
@@ -39,8 +39,8 @@ namespace TrackerLibrary
         public double PrizePercentage { get; set; }
 
         //Constructors
-        public PrizeModel() 
-        { 
+        public PrizeModel()
+        {
         }
 
         public PrizeModel(string placeName, string placeNumber, string prizeAmount, string prizePercentage)
@@ -60,7 +60,7 @@ namespace TrackerLibrary
             PrizePercentage = prizePercentageValue;
 
 
-            
+
         }
     }
 }
