@@ -15,7 +15,7 @@ namespace TrackerUI
             TrackerLibrary.GlobalConfig.InitializeConnections(TrackerLibrary.DatabaseType.TextFile);
             //Application.Run(new tournamentDashboardForm());
 
-            Application.Run(new createPrizeForm());
+            Application.Run(new createTeamForm());
 
         }
     }
